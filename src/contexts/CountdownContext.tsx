@@ -14,7 +14,6 @@ interface CountdownContextData {
 
 interface CountdownProviderProps {
   children: ReactNode;
-
 }
 
 export const CountdownContext = createContext({} as CountdownContextData)
@@ -39,6 +38,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
   function resetCountdown() {
     clearTimeout(countdownTimeout);
     setIsActive(false);
+    setHasFinished(false);
     setTime(0.1 * 60);
   }
 
@@ -54,8 +54,6 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     }
   }, [isActive, time]);
 
-
-  
   return (
     <CountdownContext.Provider value={{
       minutes, 
@@ -67,7 +65,5 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     }}>
       {children}
     </CountdownContext.Provider>
-
-  )
-
+  );
 }
