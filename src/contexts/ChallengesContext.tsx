@@ -70,9 +70,11 @@ export function ChallengesProvider({ children, ...rest } : ChallengesProviderPro
 
     setActiveChallenge(challenge);
 
+    new Audio('/notification.mp3').play
+
     if (Notification.permission == 'granted') {
       new Notification('Novo desafio 🎉', {
-        body: `Valendo ${challenge.amount} xp!`
+        body: `Valendo ${challenge.amount}xp!`
       })
     }
   }
