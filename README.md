@@ -17,8 +17,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-##Projeto em produção no Vercel
+## Projeto em produção no Vercel
 
-Move It(https://moveit-next-kappa-rouge.vercel.app/)
+- [Move It](https://moveit-next-kappa-rouge.vercel.app/)
 
 ----------------------
